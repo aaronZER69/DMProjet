@@ -4,7 +4,7 @@ USE TDB;
 CREATE TABLe clients(
     id_client int primary key auto_increment,
     nom varchar(100),
-    email varchar(100);
+    email varchar(100),
     date_inscription DATE
 );
 
@@ -21,7 +21,7 @@ create table objectif(
     id_obj int primary key auto_increment,
     obj_vente decimal(10,2),
 
-)
+);
 
 create table produit(
     id_prod int primary key auto_increment,

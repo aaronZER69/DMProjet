@@ -4,9 +4,9 @@ require_once 'controllers/PerformanceController.php';
 require_once 'controllers/ObjectifController.php';
 require_once 'controllers/ProduitController.php';
 require_once 'controllers/VenteController.php';
-require_once 'controllers/DashboardController.php';
+require_once 'controllers/HomeController.php';
 
-$controller = $_GET['controller'] ?? 'dashboard';
+$controller = $_GET['controller'] ?? 'home';
 
 switch ($controller) {
     case 'performance':
@@ -25,6 +25,6 @@ switch ($controller) {
         (new ClientController())->index();
         break;
     default:
-        (new DashboardController())->index();
+        (new HomeController())->index();
         break;
 }

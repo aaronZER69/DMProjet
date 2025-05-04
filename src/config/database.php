@@ -7,7 +7,7 @@ class Database {
             $host = 'db';
             $dbname = 'dashboard';
             $user = 'root';
-            $pass = 'root';
+            $pass = '';
             try {
                 self::$pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
                 self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head><title>Tableau de Bord</title></head>
+<head>
+    <title>Tableau de Bord</title>
+</head>
 <body>
 <h1>Indicateurs Commerciaux</h1>
 <ul>

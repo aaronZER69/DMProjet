@@ -1,18 +1,10 @@
 <?php
-
 require_once __DIR__ . '/../config/database.php';
-
-class Performance
-{
-    private $db;
-
-    public function __construct()
-    {
-        $this->db = Database::connect();
+class Performance {
+    public function getAll() {
+        $db = Database::connect();
+        $stmt = $db->query("SELECT * FROM performance");
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function getAll()
-    {
-        return $this->db->query("SELECT * FROM performances")->fetchAll();
-    }
 }

@@ -3,7 +3,7 @@ services:
   php:
     build:
       context: ./docker/php
-    container_name: projet_php
+    container_name: tableau_de_bord_php
     volumes:
       - ./src:/var/www/html
     ports:
@@ -13,10 +13,10 @@ services:
 
   mysql:
     image: mysql:8.0
-    container_name: projet_mysql
+    container_name: tableau_de_bord_mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: projet_db
+      MYSQL_DATABASE: TDB
       MYSQL_USER: user
       MYSQL_PASSWORD: password
     volumes:

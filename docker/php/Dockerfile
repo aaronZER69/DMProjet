@@ -1,4 +1,7 @@
-FROM ubuntu:latest
-LABEL authors="a.zerrouk"
+FROM php:8.2-apache
 
-ENTRYPOINT ["top", "-b"]
+RUN docker-php-ext-install pdo pdo_mysql
+
+COPY ./src /var/www/html/
+
+EXPOSE 80

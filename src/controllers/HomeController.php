@@ -1,6 +1,11 @@
 <?php
+
 class HomeController {
     public function index() {
-        require __DIR__ . '/../views/home/index.php';
+        require 'views/home/index.php';
+    }
+
+    public function dashboard() {
+        require 'views/home/dashboard.php';
     }
 }

@@ -1,7 +1,7 @@
 <?php
 // index.php
 
-require_once 'src/config/database.php';
+require_once '/config/database.php';
 
 // Fonction d'autoload pour les classes
 spl_autoload_register(function ($class) {

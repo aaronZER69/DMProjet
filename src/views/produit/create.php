@@ -1,4 +1,5 @@
 <?php include '../includes/header.php'; ?>
+<?php include '../includes/nav.php'; ?>
 <h2>Ajouter un produit</h2>
 <form action="/produit/create" method="post">
     <label>Nom :</label>

@@ -1,4 +1,5 @@
-<?php include 'includes/header.php'; ?>
+<?php include '../includes/header.php'; ?>
+<?php include '../includes/nav.php'; ?>
 
 <h2>Tableau de bord - Statistiques commerciales</h2>
 

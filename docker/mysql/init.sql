@@ -20,7 +20,8 @@ create table performance(
 create table objectif(
     id_obj int primary key auto_increment,
     obj_vente decimal(10,2),
-
+    date_debut date,
+    date_fin date
 );
 
 create table produit(
@@ -29,8 +30,6 @@ create table produit(
     nom varchar(200)
 );
 
-
-
 create table ventes(
     id_vente int primary key auto_increment,
     quantite int,
@@ -38,7 +37,7 @@ create table ventes(
     id_produit int,
     id_client int,
     foreign key (id_client) references clients(id_client),
-    foreign key (id_produit) references produit(id_prod),
+    foreign key (id_produit) references produit(id_prod)
 
 );
 

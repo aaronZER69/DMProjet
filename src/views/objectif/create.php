@@ -1,5 +1,5 @@
-<?php include 'views/includes/header.php'; ?>
-<?php include 'views/includes/nav.php'; ?>
+<?php include '../includes/header.php'; ?>
+<?php include '../includes/nav.php'; ?>
 
 <h2>Ajouter un Objectif</h2>
 <form method="POST" action="?controller=objectif&action=store">
@@ -8,3 +8,4 @@
     <button type="submit">Enregistrer</button>
 </form>
 <a href="?controller=objectif&action=index">Retour</a>
+<?php include '../includes/footer.php'; ?>

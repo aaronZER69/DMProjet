@@ -1,3 +1,5 @@
+<?php include '../includes/header.php'; ?>
+<?php include '../includes/nav.php'; ?>
 <h2>Progression des Objectifs</h2>
 
 <table>
@@ -22,3 +24,4 @@
 </table>
 
 <a href="?controller=objectif&action=index">Retour</a>
+<?php include '../includes/footer.php'; ?>

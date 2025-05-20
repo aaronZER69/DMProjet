@@ -1,3 +1,5 @@
+<?php include '../includes/header.php'; ?>
+<?php include '../includes/nav.php'; ?>
 <?php?>
 <h2>Ajouter une vente</h2>
 <form method="post" action="?controller=vente&action=store">

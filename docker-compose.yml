@@ -2,7 +2,8 @@ version: '3'
 services:
   php:
     build:
-      context: ./docker/php
+      context: .
+      dockerfile: ./docker/php/Dockerfile
     container_name: tableau_de_bord_php
     volumes:
       - ./src:/var/www/html
@@ -23,7 +24,7 @@ services:
       - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
       - mysql_data:/var/lib/mysql
     ports:
-      - "3306:3306"
+      - "3307:3306"
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin

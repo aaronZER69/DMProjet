@@ -1,3 +1,5 @@
+<?php include '../includes/header.php'; ?>
+<?php include '../includes/nav.php'; ?>
 <?php?>
 <h2>Statistiques des ventes</h2>
 <ul>

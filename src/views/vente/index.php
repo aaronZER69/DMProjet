@@ -1,3 +1,5 @@
+<?php include '../includes/header.php'; ?>
+<?php include '../includes/nav.php'; ?>
 <?php
 // views/ventes/index.php
 ?>

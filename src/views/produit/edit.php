@@ -1,4 +1,5 @@
 <?php include '../includes/header.php'; ?>
+<?php include '../includes/nav.php'; ?>
 <h2>Modifier le produit</h2>
 <form action="/produit/edit" method="post">
     <input type="hidden" name="id" value="<?= $produit['id'] ?>">

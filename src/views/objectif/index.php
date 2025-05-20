@@ -1,3 +1,5 @@
+<?php include '../includes/header.php'; ?>
+<?php include '../includes/nav.php'; ?>
 <h2>Liste des Objectifs</h2>
 <a href="?controller=objectif&action=create">Ajouter un objectif</a>
 <table>
@@ -22,3 +24,4 @@
     <?php endforeach; ?>
     </tbody>
 </table>
+<?php include '../includes/footer.php'; ?>

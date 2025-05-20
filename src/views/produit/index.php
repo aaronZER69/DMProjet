@@ -1,4 +1,5 @@
 <?php include '../includes/header.php'; ?>
+<?php include '../includes/nav.php'; ?>
 <h2>Liste des produits</h2>
 <a href="/produit/create">Ajouter un produit</a>
 <table>

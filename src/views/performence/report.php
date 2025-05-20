@@ -1,3 +1,5 @@
+<?php include '../includes/header.php'; ?>
+<?php include '../includes/nav.php'; ?>
 <?php?>
 <h2>Rapport global de performance</h2>
 <table>
@@ -25,4 +27,4 @@
     </tbody>
 </table>
 <a href="?controller=performance&action=index">Retour</a>
-
+<?php include '../includes/footer.php'; ?>

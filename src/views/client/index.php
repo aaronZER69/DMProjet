@@ -1,6 +1,6 @@
 <?php include '../includes/header.php'; ?>
 <h2>Liste des clients</h2>
-<a href="/client/create">Ajouter un client</a>
+<a href="create.php">Ajouter un client</a>
 <table border="1">
     <tr>
         <th>ID</th><th>Nom</th><th>Email</th><th>Actions</th>
@@ -11,8 +11,8 @@
             <td><?= htmlspecialchars($client['nom']) ?></td>
             <td><?= htmlspecialchars($client['email']) ?></td>
             <td>
-                <a href="/client/show?id=<?= $client['id'] ?>">Voir</a> |
-                <a href="/client/edit?id=<?= $client['id'] ?>">Modifier</a>
+                <a href="/show?id=<?= $client['id'] ?>">Voir</a> |
+                <a href="/edit?id=<?= $client['id'] ?>">Modifier</a>
             </td>
         </tr>
     <?php endforeach; ?>

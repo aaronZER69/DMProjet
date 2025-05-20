@@ -1,7 +1,7 @@
 <?php include '../includes/header.php'; ?>
 <?php include '../includes/nav.php'; ?>
 <h2>Ajouter un produit</h2>
-<form action="/produit/create" method="post">
+<form action="create.php" method="post">
     <label>Nom :</label>
     <input type="text" name="nom" required>
 

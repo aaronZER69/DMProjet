@@ -1,7 +1,7 @@
 <?php include '../includes/header.php'; ?>
 <?php include '../includes/nav.php'; ?>
 <h2>Liste des produits</h2>
-<a href="/produit/create">Ajouter un produit</a>
+<a href="create.php">Ajouter un produit</a>
 <table>
     <thead>
     <tr>
@@ -18,8 +18,8 @@
             <td><?= htmlspecialchars($produit['categorie']) ?></td>
             <td><?= htmlspecialchars($produit['prix']) ?> €</td>
             <td>
-                <a href="/produit/show?id=<?= $produit['id'] ?>">Voir</a>
-                <a href="/produit/edit?id=<?= $produit['id'] ?>">Modifier</a>
+                <a href="show?id=<?= $produit['id'] ?>">Voir</a>
+                <a href="edit?id=<?= $produit['id'] ?>">Modifier</a>
             </td>
         </tr>
     <?php endforeach; ?>

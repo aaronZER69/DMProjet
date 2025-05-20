@@ -8,5 +8,5 @@
     <input type="email" name="email" value="<?= htmlspecialchars($client['email']) ?>" required><br><br>
     <button type="submit">Mettre à jour</button>
 </form>
-<a href="/client/index">Annuler</a>
+<a href="../client/index.php">Annuler</a>
 <?php include '../includes/footer.php'; ?>

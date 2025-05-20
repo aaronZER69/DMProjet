@@ -1,10 +1,8 @@
 <?php include '../includes/header.php'; ?>
 <?php include '../includes/nav.php'; ?>
-<?php
-// views/ventes/index.php
-?>
+
 <h2>Liste des ventes</h2>
-<table>
+<table border="1">
     <thead>
     <tr>
         <th>ID</th>
@@ -18,11 +16,11 @@
     <tbody>
     <?php foreach ($ventes as $vente): ?>
         <tr>
-            <td><?= $vente['id_vente'] ?></td>
-            <td><?= $vente['quantite'] ?></td>
-            <td><?= $vente['date'] ?></td>
-            <td><?= $vente['nom_produit'] ?></td>
-            <td><?= $vente['nom_client'] ?></td>
+            <td><?= htmlspecialchars($vente['id_vente']) ?></td>
+            <td><?= htmlspecialchars($vente['quantite']) ?></td>
+            <td><?= htmlspecialchars($vente['date']) ?></td>
+            <td><?= htmlspecialchars($vente['id_produit']) ?></td>
+            <td><?= htmlspecialchars($vente['id_client']) ?></td>
             <td>
                 <a href="?controller=vente&action=show&id=<?= $vente['id_vente'] ?>">Voir</a>
                 <a href="?controller=vente&action=edit&id=<?= $vente['id_vente'] ?>">Modifier</a>
@@ -32,4 +30,5 @@
     <?php endforeach; ?>
     </tbody>
 </table>
-<a href="?controller=vente&action=create">Ajouter une vente</a>
+
+<a href="create.php">Ajouter une vente</a>

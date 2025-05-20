@@ -19,12 +19,12 @@
         <p>Objectif atteint à <?= $tauxMoyen ?>%</p>
     </a>
 
-    <a href="/produit/index" class="stat-card">
+    <a href="/index" class="stat-card">
         <h3>Produits</h3>
         <p><?= $nbProduits ?> produits en catalogue</p>
     </a>
 
-    <a href="/objectif/index" class="stat-card">
+    <a href="/index" class="stat-card">
         <h3>Objectifs</h3>
         <p><?= $nbObjectifs ?> objectifs définis</p>
     </a>
@@ -61,4 +61,4 @@
     }
 </style>
 
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

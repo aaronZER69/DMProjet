@@ -3,5 +3,5 @@
 <p><strong>ID :</strong> <?= $client['id'] ?></p>
 <p><strong>Nom :</strong> <?= htmlspecialchars($client['nom']) ?></p>
 <p><strong>Email :</strong> <?= htmlspecialchars($client['email']) ?></p>
-<a href="/client/index">Retour à la liste</a>
+<a href="/index">Retour à la liste</a>
 <?php include '../includes/footer.php'; ?>

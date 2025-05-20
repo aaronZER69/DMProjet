@@ -7,5 +7,5 @@
     <input type="email" name="email" required><br><br>
     <button type="submit">Créer</button>
 </form>
-<a href="/client/index">Annuler</a>
+
 <?php include '../includes/footer.php'; ?>

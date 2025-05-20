@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../config/database.php';
 
-class Produit {
+class Vente {
     private $db;
 
     public function __construct() {

@@ -13,4 +13,4 @@
 
     <button type="submit">Ajouter</button>
 </form>
-<?php include '../includes/footer.php'; ?>
+

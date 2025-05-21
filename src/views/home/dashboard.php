@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>Bienvenue sur l'accueil</h1>
-<a href="?controller=home&action=dashboard">Accéder au tableau de bord</a>
+<a href="../home/index.php">Accéder au tableau de bord</a>
 </body>
 </html>
 

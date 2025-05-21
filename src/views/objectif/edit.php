@@ -6,5 +6,5 @@
     <input type="number" name="obj_vente" step="0.01" value="<?= $objectif['obj_vente'] ?>" required>
     <button type="submit">Mettre à jour</button>
 </form>
-<a href="?controller=objectif&action=index">Retour</a>
+<a href="../objectif/index.php">Retour</a>
 <?php include '../includes/footer.php'; ?>

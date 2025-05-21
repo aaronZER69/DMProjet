@@ -64,6 +64,14 @@
     td a:hover {
         color: #1abc9c;
     }
+
+    .text-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-align: center;
+        height: 350px;
+    }
 </style>
 
 <h2>Liste des ventes</h2>

@@ -1,8 +1,24 @@
-<?php include '../includes/header.php'; ?>
-<?php include '../includes/nav.php'; ?>
+<?php
+include '../includes/header.php';
+include '../includes/nav.php';
+
+
+if (!isset($rapports) || !is_array($rapports) || empty($rapports)) {
+    $rapports = [
+        [
+            'periode' => 'N/A',
+            'nv_clients' => 'N/A',
+            'nb_ventes' => 'N/A',
+            'objectif' => 'N/A',
+            'taux_atteint' => 'N/A',
+            'CA' => 'N/A',
+        ]
+    ];
+}
+?>
 
 <h2>Rapport global de performance</h2>
-<table>
+<table border="1" cellpadding="5" cellspacing="0">
     <thead>
     <tr>
         <th>Période</th>
@@ -16,12 +32,12 @@
     <tbody>
     <?php foreach ($rapports as $r): ?>
         <tr>
-            <td><?= $r['periode'] ?></td>
-            <td><?= $r['nv_clients'] ?></td>
-            <td><?= $r['nb_ventes'] ?></td>
-            <td><?= $r['objectif'] ?> €</td>
-            <td><?= $r['taux_atteint'] ?>%</td>
-            <td><?= $r['CA'] ?> €</td>
+            <td><?= htmlspecialchars($r['periode']) ?></td>
+            <td><?= htmlspecialchars($r['nv_clients']) ?></td>
+            <td><?= htmlspecialchars($r['nb_ventes']) ?></td>
+            <td><?= htmlspecialchars($r['objectif']) ?> €</td>
+            <td><?= htmlspecialchars($r['taux_atteint']) ?>%</td>
+            <td><?= htmlspecialchars($r['CA']) ?> €</td>
         </tr>
     <?php endforeach; ?>
     </tbody>

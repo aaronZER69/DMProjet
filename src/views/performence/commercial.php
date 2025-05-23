@@ -1,5 +1,16 @@
-<?php include '../includes/header.php'; ?>
-<?php include '../includes/nav.php'; ?>
+<?php
+include '../includes/header.php';
+include '../includes/nav.php';
+
+// Exemple d'initialisation pour tester (à remplacer par ta vraie source de données)
+if (!isset($data)) {
+    $data = [
+        'nv_clients' => 'N/A',
+        'nb_ventes' => 'N/A',
+        'CA' => 'N/A'
+    ];
+}
+?>
 
 <style>
     body {
@@ -43,9 +54,9 @@
 
 <div class="perf-box">
     <ul>
-        <li><strong>Nouveaux clients :</strong> <?= htmlspecialchars($data['nv_clients']) ?></li>
-        <li><strong>Nombre de ventes :</strong> <?= htmlspecialchars($data['nb_ventes']) ?></li>
-        <li><strong>Chiffre d'affaires :</strong> <?= htmlspecialchars($data['CA']) ?> €</li>
+        <li><strong>Nouveaux clients :</strong> <?= isset($data['nv_clients']) ? htmlspecialchars($data['nv_clients']) : 'Donnée non disponible' ?></li>
+        <li><strong>Nombre de ventes :</strong> <?= isset($data['nb_ventes']) ? htmlspecialchars($data['nb_ventes']) : 'Donnée non disponible' ?></li>
+        <li><strong>Chiffre d'affaires :</strong> <?= isset($data['CA']) ? htmlspecialchars($data['CA']) . ' €' : 'Donnée non disponible' ?></li>
     </ul>
 </div>
 

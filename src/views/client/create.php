@@ -1,6 +1,6 @@
 <?php include '../includes/header.php'; ?>
 <h2>Ajouter un client</h2>
-<form action="/client" method="POST">
+<form action="../client/index.php" method="POST">
     <label>Nom :</label><br>
     <input type="text" name="nom" required><br>
     <label>Email :</label><br>

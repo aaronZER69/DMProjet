@@ -1,6 +1,26 @@
 <?php include '../includes/header.php'; ?>
-<?php include '../includes/nav.php'; ?>
+<?php include '../includes/nav.php';
+require_once '../../config/database.php';
 
+$pdo = Database::connect();
+
+// Traitement éventuel du formulaire
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['nom']) && !empty($_POST['email'])) {
+    $nom = $_POST['nom'];
+    $email = $_POST['email'];
+    $date = date('Y-m-d');
+    $stmt = $pdo->prepare("INSERT INTO clients (nom, email, date_inscription) VALUES (?, ?, ?)");
+    $stmt->execute([$nom, $email, $date]);
+
+    exit;
+}
+
+// Récupération des clients
+$stmt = $pdo->query("SELECT * FROM clients ORDER BY id_client DESC");
+$clients = $stmt->fetchAll();
+
+
+?>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -101,22 +121,26 @@
     </thead>
     <tbody>
     <?php if (!empty($clients)) : ?>
-        <?php foreach ($clients as $client): ?>
-            <tr>
-                <td><?= htmlspecialchars($client['id']) ?></td>
-                <td><?= htmlspecialchars($client['nom']) ?></td>
-                <td><?= htmlspecialchars($client['email']) ?></td>
-                <td>
-                    <a href="?controller=client&action=show&id=<?= urlencode($client['id']) ?>">Voir</a> |
-                    <a href="?controller=client&action=edit&id=<?= urlencode($client['id']) ?>">Modifier</a>
-                </td>
-            </tr>
-        <?php endforeach; ?>
-    <?php else: ?>
+    <?php foreach ($clients as $client): ?>
+        <tr>
+            <td><?= htmlspecialchars($client['id_client']) ?></td>
+            <td><?= htmlspecialchars($client['nom']) ?></td>
+            <td><?= htmlspecialchars($client['email']) ?></td>
+            <td>
+                <a href="../client/show.php?id=<?= urlencode($client['id_client']) ?>">Voir</a> |
+                <a href="../client/edit.php?id=<?= urlencode($client['id_client']) ?>">Modifier</a>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+<?php else: ?>
+    <tr>
+        <td colspan="4">Aucun client enregistré.</td>
+    </tr>
+<?php endif; ?>
+
         <tr>
             <td colspan="4">Aucun client enregistré.</td>
         </tr>
-    <?php endif; ?>
     </tbody>
 </table>
 
